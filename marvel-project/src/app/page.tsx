@@ -1,8 +1,11 @@
+import HeroesList from "@/components/sections/HeroesList/HeroesList";
 import RandomHero from "@/components/sections/RandomHero/RandomHero";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <RandomHero/>
+    <>
+      <RandomHero/>
+      <HeroesList/>
+    </>
   )
 }
