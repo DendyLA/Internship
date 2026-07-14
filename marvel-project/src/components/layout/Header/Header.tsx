@@ -6,9 +6,9 @@ export default function Header () {
                 infromation portal
             </h1>
             <nav>
-                <a href="#" className='text-[#9F0013]'>Characters</a>
+                <a href="#" className='text-[#9F0013] hover:text-[#db2a3fe7]'>Characters</a>
                 <span> / </span>
-                <a href="#">Comics</a>
+                <a href="#" className='hover:text-[#5C5C5C]'>Comics</a>
             </nav>
         </header>
     )

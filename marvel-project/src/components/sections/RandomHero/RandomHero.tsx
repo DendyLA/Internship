@@ -1,4 +1,3 @@
-import Image from "next/image"
 import RandomHeroInfo from "@/components/sections/RandomHero/RandomHeroInfo/RandomHeroInfo"
 import ChangeHero from "@/components/sections/RandomHero/ChangeHero/ChangeHero"
 
