@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function ChangeHero() {
     return (
@@ -10,9 +11,9 @@ export default function ChangeHero() {
                         <span className='font-bold text-[24px] mt-6 -mb-1'>Or choose another one</span>
                          <div className="flex justify-between items-center">
                             <div className="mt-6">
-                                <a href="#" className=" bg-[#9F0013] text-center text-white tracking-wide px-10 py-4 [clip-path:polygon(0_0,100%_0,100%_70%,92%_100%,0_100%,0_30%,8%_0)] hover:bg-[#db2a3fe7]">
+                                <Link href="#" className=" bg-[#9F0013] text-center text-white tracking-wide px-10 py-4 [clip-path:polygon(0_0,100%_0,100%_70%,92%_100%,0_100%,0_30%,8%_0)] hover:bg-[#db2a3fe7]">
                                 TRY IT
-                                </a>
+                                </Link>
                             </div>
                             <div className="flex">
                                 <Image src="/images/shield.png" alt="shield" width={105} height={105} className="object-contain -mr-25"/>
