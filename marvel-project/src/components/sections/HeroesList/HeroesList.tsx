@@ -1,6 +1,6 @@
 //650
 
-import HeroCard from "./ListItem/HeroCard";
+import HeroCard from "./HeroCard/HeroCard";
 
 
 
