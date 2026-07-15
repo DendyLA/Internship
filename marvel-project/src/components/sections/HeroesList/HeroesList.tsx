@@ -1,4 +1,4 @@
-//650
+
 
 import HeroCard from "./HeroCard/HeroCard";
 
