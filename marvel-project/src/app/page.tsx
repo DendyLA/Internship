@@ -2,6 +2,7 @@ import HeroDescriprion from "@/components/sections/HeroDescriprion/HeroDescripri
 import HeroesList from "@/components/sections/HeroesList/HeroesList";
 import RandomHero from "@/components/sections/RandomHero/RandomHero";
 import Vision from "@/components/sections/Vision/Vision";
+import Button from "@/components/ui/Button/Button";
 
 export default function Home() {
   return (
@@ -11,7 +12,11 @@ export default function Home() {
         <HeroesList/>
         <HeroDescriprion/>
       </div>
-      <Vision/>
+        <Vision/>
+        <div className="-mt-30 ml-70">
+         <Button href="#" color='red'>LOAD MORE</Button> 
+        </div>
+        
     </>
   )
 }
