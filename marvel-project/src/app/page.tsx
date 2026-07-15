@@ -7,11 +7,10 @@ export default function Home() {
   return (
     <>
       <RandomHero/>
-      <div className="flex my-10">
+      <div className="flex">
         <HeroesList/>
         <HeroDescriprion/>
       </div>
-      <Vision/>
     </>
   )
 }
