@@ -10,7 +10,7 @@ export default function ChangeHero() {
                         <h2 className="font-bold text-[24px]">Random character for today! <br /> Do you want to get to know him better?</h2>
                         <span className='font-bold text-[24px] mt-6 -mb-1'>Or choose another one</span>
                          <div className="flex justify-between items-center">
-                            <div className="mt-6">
+                            <div className="mt-8">
                                 <Button color='red' href='#'>
                                 TRY IT
                                 </Button>
