@@ -1,0 +1,21 @@
+
+const API_URL = 'https://superheroapi.com/api/access-token/'
+
+type RequestOptions = RequestInit
+
+export async function apiClient <T>(
+    endpoint: string,
+    options: RequestOptions = {},
+): Promise <T> {
+    const response = await fetch(`${API_URL}${endpoint}`, {
+        ...options,
+        headers: {
+            'ContentType': 'application/json',
+            ...options.headers
+        }
+    })
+    if (!response.ok) {
+        throw new Error(`API error: ${response.status}`)
+    }
+    return response.json()
+}
