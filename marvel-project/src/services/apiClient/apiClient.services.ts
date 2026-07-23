@@ -4,7 +4,6 @@ const API_URL = '/api/heroes'
 type RequestOptions = RequestInit
 
 export async function apiClient <T>(
-    id: number,
     endpoint: string,
     options: RequestOptions = {},
 ): Promise <T> {
