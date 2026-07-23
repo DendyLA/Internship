@@ -1,14 +1,20 @@
+
 const API_URL = '/api/heroes'
 
 type RequestOptions = RequestInit
 
 export async function apiClient <T>(
+    id: number,
     endpoint: string,
     options: RequestOptions = {},
 ): Promise <T> {
     const response = await fetch(`${API_URL}${endpoint}`, {
-    ...options,
-});
+        ...options,
+        headers: {
+            'ContentType': 'application/json',
+            ...options.headers
+        }
+    })
     if (!response.ok) {
         throw new Error(`API error: ${response.status}`)
     }
