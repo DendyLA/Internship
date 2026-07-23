@@ -1,4 +1,3 @@
-
 const API_URL = '/api/heroes'
 
 type RequestOptions = RequestInit
