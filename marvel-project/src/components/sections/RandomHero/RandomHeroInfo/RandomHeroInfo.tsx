@@ -1,28 +1,15 @@
 'use client'
 
-import { useEffect, useState } from "react"
-import { heroService } from "@/services/apiClient/heroes/hero.services"
 import type { Hero } from "@/services/apiClient/heroes/hero.types"
 import Button from "@/components/ui/Button/Button"
-import Image from "next/image"
 
 
-export default function RandomHeroInfo() {
-    const [hero, setHero] = useState<Hero | null>(null)
-    console.log(hero);
-    const updateHero = async () => {
-        const randomId = String(Math.floor(Math.random() * 731) + 1);
-        try {
-            const data = await heroService.getHero(randomId)
-            setHero(data)
-        } catch (error) {
-            console.error(error)
-        }
-    }
-    useEffect(()=>{
-        updateHero()
-    }, [])
-    if (!hero) {
+type RandomHeroInfoProps = {
+    hero: Hero | null;
+};
+
+export default function RandomHeroInfo({hero,}: RandomHeroInfoProps) {
+        if (!hero) {
         return <section>Loading...</section>
     }
     return (
