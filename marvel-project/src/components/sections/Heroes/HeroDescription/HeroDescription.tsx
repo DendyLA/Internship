@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import type { Hero } from "@/services/heroes/hero.types"
 import HeroDecsriptionSkeleton from "./HeroDescriptionSkeleton"
+import PowerStats from "./PowerStats/PowerStats"
 
 type HeroDescriptionProps = {
     hero: Hero | null
@@ -38,41 +39,7 @@ export default function HeroDescription({hero,}:HeroDescriptionProps) {
                         In Norse mythology, Loki is a god or jötunn (or both). Loki is the son of Fárbauti and Laufey, and the brother of Helblindi and Býleistr. By the jötunn Angrboða, Loki is the father of Hel, the wolf Fenrir, and the world serpent Jörmungandr. By Sigyn, Loki is the father of Nari and/or Narfi and with the stallion Svaðilfari as the father, Loki gave birth—in the form of a mare—to the eight-legged horse Sleipnir. In addition, Loki is referred to as the father of Váli in the Prose Edda.
                     </p>
                 </div>
-                <div className="flex flex-col gap-3">
-                    <h2 className="text-[15px] font-bold">Comics:</h2>
-                    <ul className="flex flex-col text-[12px] gap-2">
-                        <li>
-                            <Link href="#"className="block bg-white px-3 py-2 shadow-lg hover:shadow-[#5C5C5C] transition-shadow">All-Winners Squad: Band of Heroes (2011) #3</Link>
-                        </li>
-                        <li>
-                            <Link href="#"className="block bg-white px-3 py-2 shadow-lg hover:shadow-[#5C5C5C] transition-shadow">Alpha Flight (1983) #50</Link>
-                        </li>
-                        <li>
-                            <Link href="#"className="block bg-white px-3 py-2 shadow-lg hover:shadow-[#5C5C5C] transition-shadow">Amazing Spider-Man (1999) #503</Link>
-                        </li>
-                        <li>
-                            <Link href="#"className="block bg-white px-3 py-2 shadow-lg hover:shadow-[#5C5C5C] transition-shadow">Amazing Spider-Man (1999) #504</Link>
-                        </li>
-                        <li>
-                            <Link href="#"className="block bg-white px-3 py-2 shadow-lg hover:shadow-[#5C5C5C] transition-shadow">AMAZING SPIDER-MAN VOL. 7: BOOK OF EZEKIEL TPB (Trade Paperback)</Link>
-                        </li>
-                        <li>
-                            <Link href="#"className="block bg-white px-3 py-2 shadow-lg hover:shadow-[#5C5C5C] transition-shadow">Amazing-Spider-Man: Worldwide Vol. 8 (Trade Paperback)</Link>
-                        </li>
-                        <li>
-                            <Link href="#"className="block bg-white px-3 py-2 shadow-lg hover:shadow-[#5C5C5C] transition-shadow">Asgardians Of The Galaxy Vol. 2: War Of The Realms (Trade Paperback)</Link>
-                        </li>
-                        <li>
-                            <Link href="#"className="block bg-white px-3 py-2 shadow-lg hover:shadow-[#5C5C5C] transition-shadow">Vengeance (2011) #4</Link>
-                        </li>
-                        <li>
-                            <Link href="#"className="block bg-white px-3 py-2 shadow-lg hover:shadow-[#5C5C5C] transition-shadow">Avengers (1963) #1</Link>
-                        </li>
-                        <li>
-                            <Link href="#"className="block bg-white px-3 py-2 shadow-lg hover:shadow-[#5C5C5C] transition-shadow">Avengers (1996) #1</Link>
-                        </li>
-                    </ul>
-                </div>
+                <PowerStats powerstats={hero.powerstats}/>
             </section>
         </>
     )  
