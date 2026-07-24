@@ -1,7 +1,12 @@
 import Button from "@/components/ui/Button/Button"
 import Image from "next/image"
 
-export default function ChangeHero() {
+
+type ChangeHeroProps = {
+    onChangeHero: () => void;
+};
+
+export default function ChangeHero({onChangeHero,}: ChangeHeroProps) {
     return (
         <>
             <div>
@@ -11,7 +16,7 @@ export default function ChangeHero() {
                         <span className='font-bold text-[24px] mt-6 -mb-1'>Or choose another one</span>
                          <div className="flex justify-between items-center">
                             <div className="mt-8">
-                                <Button color='red' href='#'>
+                                <Button color='red' onClick={onChangeHero}>
                                 TRY IT
                                 </Button>
                             </div>
