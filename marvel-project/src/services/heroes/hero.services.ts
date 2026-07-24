@@ -1,6 +1,5 @@
-import { apiClient } from "../apiClient.services";
-import type {Hero} from "@/services/apiClient/heroes/hero.types"
-
+import { apiClient } from "@/services/apiClient/apiClient.services";
+import type {Hero} from "@/services/heroes/hero.types"
 
 export const heroService = {
     getHero(id: string){

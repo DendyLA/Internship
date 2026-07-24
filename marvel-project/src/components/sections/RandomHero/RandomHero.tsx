@@ -4,8 +4,8 @@
 import RandomHeroInfo from "@/components/sections/RandomHero/RandomHeroInfo/RandomHeroInfo"
 import ChangeHero from "@/components/sections/RandomHero/ChangeHero/ChangeHero"
 import { useEffect, useState } from "react"
-import { heroService } from "@/services/apiClient/heroes/hero.services";
-import { Hero } from "@/services/apiClient/heroes/hero.types";
+import { heroService } from "@/services/heroes/hero.services";
+import { Hero } from "@/services/heroes/hero.types";
 
 
 
