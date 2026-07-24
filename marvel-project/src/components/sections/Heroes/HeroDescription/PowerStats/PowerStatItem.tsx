@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion";
 
 type PowerStatItemProps={
     title: string;
@@ -25,7 +25,7 @@ export default function PowerStatItem({title, value}:PowerStatItemProps){
                     <span>{percent}</span>
                 </div>
                 <div className="w-full h-3 rounded-full bg-gray-300 overflow-hidden">
-                    <div className={`h-full transition-all duration-700  ${color}`} style={{width:`${percent}%`}}/>
+                    <motion.div className={`h-full ${color}`} initial={{width:0}} animate={{width:`${percent}%`}} transition={{duration: 0.8}}/>
                 </div>
             </div>
         </>
